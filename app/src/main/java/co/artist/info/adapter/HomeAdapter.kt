@@ -27,7 +27,7 @@ class HomeAdapter() : RecyclerView.Adapter<HomeAdapter.ViewHolder>() {
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         if (!artistList[position].artworkUrl30.isNullOrBlank()) {
-            Picasso.get().load(artistList[position].artworkUrl30).fit().centerCrop()
+            Picasso.get().load(artistList[position].artworkUrl100).fit().centerCrop()
                 .placeholder(R.drawable.itunes)
                 .error(R.drawable.itunes)
                 .into(holder.binding.roundedBg)
@@ -48,5 +48,29 @@ class HomeAdapter() : RecyclerView.Adapter<HomeAdapter.ViewHolder>() {
     inner class ViewHolder(itemView: ItemViewItunesGridBinding) :
         RecyclerView.ViewHolder(itemView.root) {
         var binding = itemView
+    }
+
+    fun filterData(s: CharSequence) {
+        var tmpList: List<ArtistiTunesResponse.Projects>? = mutableListOf()
+        artistList = artistList
+
+        if (s.length > 0) {
+            for (model in artistList) {
+                if (tmpList != null) {
+                    if (model.trackName!!.toLowerCase().contains(s.toString().toLowerCase())) {
+                        tmpList += model
+                    }
+                }
+            }
+
+            this.artistList = tmpList!!
+            notifyDataSetChanged()
+
+        } else {
+            this.artistList = artistList
+            notifyDataSetChanged()
+        }
+
+
     }
 }

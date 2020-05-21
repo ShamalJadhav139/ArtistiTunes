@@ -6,6 +6,7 @@ import android.content.Context
 import android.net.ConnectivityManager
 import android.net.NetworkInfo
 import android.util.Log
+import android.widget.Toast
 import co.artist.info.constant.ApiConstants
 import co.artist.info.network.ApiClient
 import co.artist.info.network.ApiInterface
@@ -85,7 +86,7 @@ class MainActivityPresenter(private val mView: MainContract.View) : MainContract
                         if (response.code() == 200) {
                             mView.setViewData(response.body().toString(), view)
                         }else{
-
+                            Toast.makeText(context, "Server under maintenance", Toast.LENGTH_SHORT).show()
                         }
                     }
 

@@ -1,9 +1,12 @@
 package co.artist.info.view.fragment
 
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
@@ -77,6 +80,8 @@ class HomeFragment : BaseFragment(), MainContract.View {
                     mViewModel!!.deleteAll()
                     homeAdapter.setData(response.results)
                     mViewModel!!.insertAll(response.results)
+                }else{
+                    Toast.makeText(context, "Data not found", Toast.LENGTH_SHORT).show()
                 }
             }
         }
