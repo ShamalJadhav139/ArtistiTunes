@@ -84,6 +84,8 @@ class MainActivityPresenter(private val mView: MainContract.View) : MainContract
 
                         if (response.code() == 200) {
                             mView.setViewData(response.body().toString(), view)
+                        }else{
+
                         }
                     }
 
