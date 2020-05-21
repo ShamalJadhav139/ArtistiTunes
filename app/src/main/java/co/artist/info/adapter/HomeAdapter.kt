@@ -50,27 +50,5 @@ class HomeAdapter() : RecyclerView.Adapter<HomeAdapter.ViewHolder>() {
         var binding = itemView
     }
 
-    fun filterData(s: CharSequence) {
-        var tmpList: List<ArtistiTunesResponse.Projects>? = mutableListOf()
-        artistList = artistList
-
-        if (s.length > 0) {
-            for (model in artistList) {
-                if (tmpList != null) {
-                    if (model.trackName!!.toLowerCase().contains(s.toString().toLowerCase())) {
-                        tmpList += model
-                    }
-                }
-            }
-
-            this.artistList = tmpList!!
-            notifyDataSetChanged()
-
-        } else {
-            this.artistList = artistList
-            notifyDataSetChanged()
-        }
-
-
-    }
+    
 }
