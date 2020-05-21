@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Artist iTunes</string>
+    <string name="home">Home</string>
+    <string name="search">Search</string>
+    <string name="submit">Submit</string>
+    <string name="loading">Loading</string>
+    <string name="artist_name">Artist Name</string>
+    <string name="details">Details</string>
+    <string name="wrapperType">Wrapper Type</string>
+    <string name="kind">Kind</string>
+    <string name="collection_name">Collection Name</string>
+    <string name="teack_name">Track Name</string>
+    <string name="collection_censored">collection Censored Name</string>
+    <string name="trackCensoredName">track Censored Name</string>
+    <string name="collection_explicitness">collection Explicitness</string>
+    <string name="country">Country</string>
+    <string name="currency">Currency</string>
+</resources>

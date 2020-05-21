@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+        <variable
+            name="detailsObj"
+            type="co.artist.info.model.ArtistiTunesResponse.Projects" />
+    </data>
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:clickable="true"
+        android:focusable="true"
+        android:orientation="vertical">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/login_main_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:clickable="true"
+        android:focusable="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical">
+            <LinearLayout
+                android:padding="@dimen/_10sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="5">
+                <TextView
+                    style="@style/custom_reguler_tv"
+                    android:text="@string/wrapperType"
+                    android:layout_weight="2.3"
+                    android:textStyle="bold" />
+
+                <TextView
+                    style="@style/custom_reguler_tv"
+                    android:layout_weight="2.7"
+                    android:text="@{detailsObj.wrapperType}" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:background="@color/colorGreyLight"
+                android:layout_height="0.2dp"/>
+
+            <LinearLayout
+                android:padding="@dimen/_10sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="5">
+                <TextView
+                    style="@style/custom_reguler_tv"
+                    android:text="@string/kind"
+                    android:layout_weight="2.3"
+                    android:textStyle="bold" />
+
+                <TextView
+                    style="@style/custom_reguler_tv"
+                    android:layout_weight="2.7"
+                    android:text="@{detailsObj.kind}" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:background="@color/colorGreyLight"
+                android:layout_height="0.2dp"/>
+
+            <LinearLayout
+                android:padding="@dimen/_10sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="5">
+                <TextView
+                    style="@style/custom_reguler_tv"
+                    android:text="@string/artist_name"
+                    android:layout_weight="2.3"
+                    android:textStyle="bold" />
+
+                <TextView
+                    style="@style/custom_reguler_tv"
+                    android:layout_weight="2.7"
+                    android:text="@{detailsObj.artistName}" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:background="@color/colorGreyLight"
+                android:layout_height="0.2dp"/>
+
+            <LinearLayout
+                android:padding="@dimen/_10sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="5">
+                <TextView
+                    style="@style/custom_reguler_tv"
+                    android:text="@string/collection_name"
+                    android:layout_weight="2.3"
+                    android:textStyle="bold" />
+
+                <TextView
+                    style="@style/custom_reguler_tv"
+                    android:layout_weight="2.7"
+                    android:text="@{detailsObj.collectionName}" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:background="@color/colorGreyLight"
+                android:layout_height="0.2dp"/>
+
+            <LinearLayout
+                android:padding="@dimen/_10sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="5">
+                <TextView
+                    style="@style/custom_reguler_tv"
+                    android:text="@string/teack_name"
+                    android:layout_weight="2.3"
+                    android:textStyle="bold" />
+
+                <TextView
+                    style="@style/custom_reguler_tv"
+                    android:layout_weight="2.7"
+                    android:text="@{detailsObj.trackName}" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:background="@color/colorGreyLight"
+                android:layout_height="0.2dp"/>
+
+            <LinearLayout
+                android:padding="@dimen/_10sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="5">
+                <TextView
+                    style="@style/custom_reguler_tv"
+                    android:text="@string/collection_censored"
+                    android:layout_weight="2.3"
+                    android:textStyle="bold" />
+
+                <TextView
+                    style="@style/custom_reguler_tv"
+                    android:layout_weight="2.7"
+                    android:text="@{detailsObj.collectionCensoredName}" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:background="@color/colorGreyLight"
+                android:layout_height="0.2dp"/>
+
+            <LinearLayout
+                android:padding="@dimen/_10sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="5">
+                <TextView
+                    style="@style/custom_reguler_tv"
+                    android:text="@string/trackCensoredName"
+                    android:layout_weight="2.3"
+                    android:textStyle="bold" />
+
+                <TextView
+                    style="@style/custom_reguler_tv"
+                    android:layout_weight="2.7"
+                    android:text="@{detailsObj.trackCensoredName}" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:background="@color/colorGreyLight"
+                android:layout_height="0.2dp"/>
+
+            <LinearLayout
+                android:padding="@dimen/_10sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="5">
+                <TextView
+                    style="@style/custom_reguler_tv"
+                    android:text="@string/collection_explicitness"
+                    android:layout_weight="2.3"
+                    android:textStyle="bold" />
+
+                <TextView
+                    style="@style/custom_reguler_tv"
+                    android:layout_weight="2.7"
+                    android:text="@{detailsObj.collectionExplicitness}" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:background="@color/colorGreyLight"
+                android:layout_height="0.2dp"/>
+
+            <LinearLayout
+                android:padding="@dimen/_10sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="5">
+                <TextView
+                    style="@style/custom_reguler_tv"
+                    android:text="@string/country"
+                    android:layout_weight="2.3"
+                    android:textStyle="bold" />
+
+                <TextView
+                    style="@style/custom_reguler_tv"
+                    android:layout_weight="2.7"
+                    android:text="@{detailsObj.country}" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:background="@color/colorGreyLight"
+                android:layout_height="0.2dp"/>
+
+            <LinearLayout
+                android:padding="@dimen/_10sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="5">
+                <TextView
+                    style="@style/custom_reguler_tv"
+                    android:text="@string/currency"
+                    android:layout_weight="2.3"
+                    android:textStyle="bold" />
+
+                <TextView
+                    style="@style/custom_reguler_tv"
+                    android:layout_weight="2.7"
+                    android:text="@{detailsObj.currency}" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:background="@color/colorGreyLight"
+                android:layout_height="0.2dp"/>
+        </LinearLayout>
+    </LinearLayout>
+    </ScrollView>
+</layout>
