@@ -26,12 +26,12 @@ class HomeAdapter() : RecyclerView.Adapter<HomeAdapter.ViewHolder>() {
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        if (artistList[position].artistViewUrl!!.isNotEmpty()) {
+
             Picasso.get().load(artistList[position].artistViewUrl).fit().centerCrop()
                 .placeholder(R.drawable.itunes)
                 .error(R.drawable.itunes)
                 .into(holder.binding.roundedBg)
-        }
+
         holder.binding.trackName.text = artistList[position].trackName
 
         holder.itemView.setOnClickListener {

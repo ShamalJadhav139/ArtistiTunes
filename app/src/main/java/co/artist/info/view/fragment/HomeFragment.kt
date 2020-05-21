@@ -75,7 +75,11 @@ class HomeFragment : BaseFragment(), MainContract.View {
                 val response = Gson().fromJson(data, ArtistiTunesResponse::class.java)
                 if(response.results!=null){
                     homeAdapter.setData(response.results)
+                    mViewModel!!.deleteAll()
                     mViewModel!!.insertAll(response.results)
+
+
+
 
                 }
             }
